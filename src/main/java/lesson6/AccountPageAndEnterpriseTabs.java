@@ -1,5 +1,6 @@
 package lesson6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -34,7 +35,7 @@ public class AccountPageAndEnterpriseTabs extends BasePage {
     @FindBy(xpath = "//div[@id='suctext']")
     public WebElement messageThanksText;
 
-
+@Step("Ввод и отправка данных в форму обратной связи")
     public LanguagePage enterpriseTabs() {
         driver.get("https://turborender.com/fr/enterprise/");
         actions.moveToElement(windowFeedback).click().build().perform();

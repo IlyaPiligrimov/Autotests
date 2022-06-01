@@ -1,5 +1,6 @@
 package lesson6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,7 +30,7 @@ public class NavigationPage extends BasePage {
     @FindBy(xpath = "//div[@class='topmenu']/ul/li[5]")
     private WebElement desktopApp;
 
-
+@Step("Клик на все вкладки меню")
     public SingInPage clickToTabs() {
 
         actions.moveToElement(menu).moveToElement(features).click().build().perform();
